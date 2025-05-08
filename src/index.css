@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+/* Custom Tailwind Extensions */
+@layer base {
+  :root {
+    --color-primary: 91, 67, 214;     /* #5B43D6 - Purple */
+    --color-secondary: 42, 196, 162;  /* #2AC4A2 - Teal */
+    --color-background: 245, 239, 230; /* #F5EFE6 - Warm Sand */
+    --color-accent: 255, 107, 107;    /* #FF6B6B - Coral */
+    --color-navy: 45, 48, 71;         /* #2D3047 - Deep Navy */
+  }
+
+  body {
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-navy));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: rgb(var(--color-navy));
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  .section {
+    @apply py-12 md:py-20;
+  }
+}
+
+@layer utilities {
+  .text-primary {
+    color: rgb(var(--color-primary));
+  }
+
+  .bg-primary {
+    background-color: rgb(var(--color-primary));
+  }
+
+  .text-secondary {
+    color: rgb(var(--color-secondary));
+  }
+
+  .bg-secondary {
+    background-color: rgb(var(--color-secondary));
+  }
+
+  .text-accent {
+    color: rgb(var(--color-accent));
+  }
+
+  .bg-accent {
+    background-color: rgb(var(--color-accent));
+  }
+
+  .text-navy {
+    color: rgb(var(--color-navy));
+  }
+
+  .bg-navy {
+    background-color: rgb(var(--color-navy));
+  }
+
+  .bg-background {
+    background-color: rgb(var(--color-background));
+  }
+}
